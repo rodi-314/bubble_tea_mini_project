@@ -1,0 +1,66 @@
+{
+  "stock": {
+    "Black Tea": 1000,
+    "Green Tea": 1000,
+    "Oolong Tea": 1000,
+    "Hazelnut Tea": 1000,
+    "Milk": 1000,
+    "Boba": 1000,
+    "Syrup": 1000,
+    "Caramel": 1000,
+    "Honey": 1000,
+    "Ice": 1000
+  },
+
+
+  "menu": {
+    "Milk Tea with Pearls - $4.00": {
+      "Black Tea": 225,
+      "Milk": 75,
+      "Boba": 50,
+      "Syrup": 75,
+      "Ice": 75
+    },
+    "Green Milk Tea with Pearls - $4.00": {
+      "Green Tea": 225,
+      "Milk": 75,
+      "Boba": 50,
+      "Syrup": 75,
+      "Ice": 75
+    },
+    "Oolong Milk Tea with Pearls - $4.00": {
+      "Oolong Tea": 225,
+      "Milk": 75,
+      "Boba": 50,
+      "Syrup": 75,
+      "Ice": 75
+    },
+    "Caramel Milk Tea with Pearls - $4.60": {
+      "Black Tea": 225,
+      "Milk": 75,
+      "Boba": 50,
+      "Caramel": 75,
+      "Ice": 75
+    },
+    "Hazelnut Milk Tea with Pearls - $4.60": {
+      "Hazelnut Tea": 225,
+      "Milk": 75,
+      "Boba": 50,
+      "Syrup": 75,
+      "Ice": 75
+    },
+    "Honey Milk Tea with Pearls - $4.60": {
+      "Black Tea": 225,
+      "Milk": 75,
+      "Boba": 50,
+      "Honey": 75,
+      "Ice": 75
+    },
+    "Honey Oolong Milk Tea with Pearls - $4.60": {
+      "Oolong Tea": 225,
+      "Milk": 75,
+      "Boba": 50,
+      "Honey": 75,
+      "Ice": 75}
+  }
+}
