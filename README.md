@@ -10,3 +10,60 @@ The purpose of this mini project is to emulate the ordering and stock management
   - Only allow drinks that are in stock to be ordered
   - Update stock information when a drink is ordered
   - Ability to edit stock information and order number
+
+## Version 1
+
+![image](https://github.com/user-attachments/assets/53566262-c312-42e8-93e4-883cd3868edd)
+
+- Each machine has its own global variables for stock, menu, and order number
+- Updating stock or order number (admin):
+  - New variables published to broker
+    - Sent to other machines and the admin itself
+    - Upon receiving the update, global variables are updated (stock, order number)
+- Ordering a drink (client):
+  - Client checks stock locally if drink is available
+  - If drink is available:
+    - New variables published to other machines
+    - Upon receiving the update, global variables are updated (stock, order number)
+    - Order published
+
+### Shortcomings
+- Inefficiency:
+  - Clients store a lot of information (menu, stock, order number)
+  - Clients check if drinks are still available
+  - Many MQTT topics used for each ingredient in stock, orders, and order number
+- Clients will be out of sync when restarted
+- Orders sent at the same time will cause stock and order number to be updated incorrectly
+- Stock and menu must be updated on all machines if edited
+- Sensitive information (stock) can be accessed by clients
+
+## Version 2
+
+![image](https://github.com/user-attachments/assets/0cf22215-e1dc-4161-8d80-f0be98b40239)
+
+- Clients only store information on menu and availability
+- Server stores all information – menu and availability, stock, order number
+- Updating stock or order number (admin):
+  - New variables published to broker
+    - Sent to other machines and the admin itself
+    - Upon receiving the update, global variables are updated (stock, order number)
+- Ordering a drink (client):
+  - Client sends a purchase request to server
+    - Server checks stock locally if drink is available
+    - If drink is available:
+      - Server updates global variables (stock, order number, menu and availability)
+      - Server sends approved reply with order number to client
+      - Server sends update for menu and availability to all clients
+    - If drink is out of stock:
+      - Server sends rejected reply to client
+
+### Improvements
+- Improved efficiency:
+  - Clients only store information on menu and availability
+  - Checking is done by the server
+  - Only 3 MQTT topics used – Order/Request, Order/Reply, Menu/Availability
+- Clients will be in sync when restarted
+- Orders made at the same time will not cause incorrect updates
+  - Server can only process one request at a time
+- Stock and menu only has to be updated on server if edited
+- Sensitive information (stock) cannot be accessed by clients
