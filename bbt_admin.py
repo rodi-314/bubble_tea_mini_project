@@ -2,8 +2,8 @@ from paho.mqtt import client as mqtt_client
 import json
 
 # Network Information
-BROKER = 'localhost'
-PORT = 12345
+BROKER = 'test.mosquitto.org'
+PORT = 1883
 CLIENT_ID = 'bbt-admin'
 DELIMITER = '|'
 

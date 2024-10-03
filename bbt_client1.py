@@ -3,8 +3,8 @@ import threading
 import time
 
 # Network Information
-BROKER = 'localhost'
-PORT = 12345
+BROKER = 'test.mosquitto.org'
+PORT = 1883
 CLIENT_ID = 'bbt-client-1'
 DELIMITER = '|'
 WAIT_FOR_CONNECTION = 1  # seconds
