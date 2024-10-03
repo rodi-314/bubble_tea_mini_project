@@ -8,11 +8,22 @@ The purpose of this mini project is to emulate the ordering and stock management
 - Emulate ordering and stock management system in real bubble tea stores
 - Client-server architecture
 - MQTT protocol
-- Features to be implemented:
+- Features implemented:
   - Order interface for clients
   - Only allow drinks that are in stock to be ordered
   - Update stock information when a drink is ordered
   - Ability to edit stock information and order number
+ 
+## Usage
+
+### Monitoring Interface (Start Screen)
+![image](https://github.com/user-attachments/assets/86ac2430-2875-49c5-8d43-62b1affdbb3c)
+
+### Monitoring Interface (After 9 Orders)
+![image](https://github.com/user-attachments/assets/620f5b4a-82fd-4f0f-a98d-f3f9062fdcad)
+
+### Corresponding Ordering Interface (After 9 Orders)
+![image](https://github.com/user-attachments/assets/b7b02034-31e9-4825-b72d-ca14c2db89cd)
 
 ## Version 1
 
