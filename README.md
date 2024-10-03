@@ -1,2 +1,2 @@
-# bubble_tea_mini_project
-The purpose of this mini project is to emulate the ordering and stock management system in real bubble tea stores using the MQTT protocol. There is an electronic ordering system and stock management implemented that is constantly updated and can be dynamically edited.
+# Bubble Tea Ordering & Stock Management System
+The purpose of this mini project is to emulate the ordering and stock management system in real bubble tea stores using the MQTT protocol. There is an electronic ordering system and stock management implemented that is constantly updated and can be dynamically edited. For more information and details, view the project presentation slides [here](https://docs.google.com/presentation/d/1WIxpvgtF3KCmu6bk_zbuvFGN2j9cvr659kE0YcljL94/edit?usp=sharing).
