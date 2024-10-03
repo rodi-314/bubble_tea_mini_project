@@ -13,8 +13,27 @@ The purpose of this mini project is to emulate the ordering and stock management
   - Only allow drinks that are in stock to be ordered
   - Update stock information when a drink is ordered
   - Ability to edit stock information and order number
- 
+
 ## Usage
+### Clone Repository and Install Dependencies
+```
+git clone https://github.com/rodi-314/bubble_tea_mini_project.git
+pip install requirements.txt
+```
+- All scripts use the online MQTT broker at <https://test.mosquitto.org> on port 1883, hence a local broker is not required
+
+### Starting the Program
+- Run bbt_server.py before any other scripts (i.e., bbt_admin.py, bbt_clientx.py)
+- bbt_server.py has to be running for all other scripts to work
+  - If bbt_server.py is down, all information (e.g., order number, stock information, etc.) will be lost
+    - All information is retained as long as bbt_server.py is up
+
+### Using the Program
+- Use bbt_server.py to monitor stocks and receive orders
+- Use bbt_clientx.py to purchase items (bbt_clientx.py can be duplicated to simulate more ordering machines)
+- Use bbt_admin.py to update the order number or stocks
+
+## Screenshots
 
 ### Monitoring Interface (Start Screen)
 ![image](https://github.com/user-attachments/assets/86ac2430-2875-49c5-8d43-62b1affdbb3c)
